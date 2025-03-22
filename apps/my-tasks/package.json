@@ -1,0 +1,8 @@
+{
+  "name": "@my-tasks/my-tasks",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "my-tasks"
+  }
+}
