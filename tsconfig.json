@@ -8,6 +8,15 @@
     },
     {
       "path": "./apps/my-tasks"
+    },
+    {
+      "path": "./apps/my-tasks-api-e2e"
+    },
+    {
+      "path": "./apps/my-tasks-api"
+    },
+    {
+      "path": "./libs/my-tasks-dto"
     }
   ]
 }
