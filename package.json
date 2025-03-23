@@ -8,15 +8,22 @@
     "web:serve": "npx nx serve my-tasks",
     "web:test": "npx nx test my-tasks",
     "web:e2e": "npx nx e2e my-tasks-e2e",
-    "web:lint": "npx nx lint my-tasks"
+    "web:lint": "npx nx lint my-tasks",
+    "dev": "npx nx run-many --target=dev --projects=my-tasks",
+    "build": "npx nx run-many --target=build --projects=my-tasks-dto,my-tasks-api,my-tasks",
+    "serve": "npx nx run-many --target=serve --projects=my-tasks-api,my-tasks",
+    "test": "npx nx run-many --target=test --projects=my-tasks-dto,my-tasks-api,my-tasks"
   },
   "private": true,
   "dependencies": {
     "axios": "^1.6.0",
+    "cors": "^2.8.5",
     "express": "^4.21.2",
+    "express-validator": "^7.2.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-router-dom": "6.29.0"
+    "react-router-dom": "6.29.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
@@ -42,6 +49,7 @@
     "@swc/helpers": "~0.5.11",
     "@testing-library/dom": "10.4.0",
     "@testing-library/react": "16.1.0",
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.0.0",

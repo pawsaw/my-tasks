@@ -1,15 +1,21 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useTasks } from '../../../hooks/useTasks';
 
 export const TaskCreate = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const { createTask } = useTasks();
+  const navigate = useNavigate();
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     console.log({ title, description });
-    setTitle('');
-    setDescription('');
+    createTask({ title, description, status: 'To Do' }).then(() => {
+      setTitle('');
+      setDescription('');
+      navigate('..');
+    });
   };
 
   return (

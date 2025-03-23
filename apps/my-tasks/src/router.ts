@@ -1,6 +1,5 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
 import { Task } from './app/Task/Task';
-import { TaskDetail } from './app/Task/TaskDetail/TaskDetail';
 import { TaskCreate } from './app/Task/TaskCreate/TaskCreate';
 import { TaskEdit } from './app/Task/TaskEdit/TaskEdit';
 import { App } from './app/App';
@@ -21,10 +20,6 @@ export const router = createBrowserRouter([
             Component: TaskCreate,
           },
           {
-            path: ':id',
-            Component: TaskDetail,
-          },
-          {
             path: ':id/edit',
             Component: TaskEdit,
           },
@@ -39,7 +34,7 @@ export const router = createBrowserRouter([
         Component: About,
       },
       {
-        path: '*',
+        path: '',
         loader: () => redirect('/tasks'),
       },
     ],

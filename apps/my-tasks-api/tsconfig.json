@@ -4,6 +4,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/my-tasks-dto"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {
