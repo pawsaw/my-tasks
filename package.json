@@ -2,7 +2,14 @@
   "name": "@my-tasks/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "web:dev": "npx nx dev my-tasks",
+    "web:build": "npx nx build my-tasks",
+    "web:serve": "npx nx serve my-tasks",
+    "web:test": "npx nx test my-tasks",
+    "web:e2e": "npx nx e2e my-tasks-e2e",
+    "web:lint": "npx nx lint my-tasks"
+  },
   "private": true,
   "dependencies": {
     "axios": "^1.6.0",

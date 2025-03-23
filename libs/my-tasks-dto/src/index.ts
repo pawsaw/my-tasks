@@ -1,1 +1,1 @@
-export * from './lib/my-tasks-dto.js';
+export * from './lib/task.js';
