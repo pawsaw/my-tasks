@@ -4,9 +4,6 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/my-tasks-e2e"
-    },
-    {
       "path": "./apps/my-tasks"
     },
     {
